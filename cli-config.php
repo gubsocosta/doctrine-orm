@@ -1,5 +1,5 @@
 <?php
-
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use Gubsocosta\Orm\Helpers\EntityManagerFactory;
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -7,4 +7,4 @@ require_once __DIR__ . '/vendor/autoload.php';
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 
-var_dump($entityManager->getConnection());
+return ConsoleRunner::createHelperSet($entityManager);

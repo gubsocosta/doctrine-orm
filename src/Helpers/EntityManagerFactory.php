@@ -6,6 +6,12 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\Setup;
 
+
+/**
+ * Class EntityManagerFactory
+ * 
+ * @package Gubsocosta\Orm\Helpers
+ */
 class EntityManagerFactory
 {
     /**
@@ -15,10 +21,10 @@ class EntityManagerFactory
     {
         $rootDir = __DIR__ . '/../..';
 
-        $config = Setup::createAnnotationMetadataConfiguration([
-            $rootDir . '/src',
+        $config = Setup::createAnnotationMetadataConfiguration(
+            [$rootDir . '/src'],
             true
-        ]);
+        );
 
         $connection = [
             'driver'    => 'pdo_sqlite',
