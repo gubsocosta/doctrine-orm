@@ -1,10 +1,10 @@
 ## Mapeando entidade com doctrine/orm
 
-Adicionar a _docstring_ _@Entity_ na definição da classe
+Adicionar a _Annotations_ _@Entity_ na definição da classe
 
-Apontar qual será o parâmetro que será o identificador único dela, com a _docstring_ _@Id_.
+Apontar qual será o parâmetro que será o identificador único dela, com a _Annotations_ _@Id_.
 
-Referenciar todos os campos que a tabela terá com a _docstring_ _@Column_
+Referenciar todos os campos que a tabela terá com a _Annotations_ _@Column_
 
 Ex.:
 ```
@@ -30,4 +30,12 @@ class Student
     private $name;
 
     ...
+```
+
+## Doctrine CLI
+Com a CLI do doctrine, conseguimos realizar várias tarefas, como executar _queries_, verificar detalhes de sobre entidades mapeadas, etc.
+
+Para visualizar comandos disponíveis, estando na pasta raiz do projeto, basta digitar no terminal:
+```
+$ php  vendor/bin/doctrine list
 ```
